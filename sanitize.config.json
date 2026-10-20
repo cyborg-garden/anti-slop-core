@@ -1,0 +1,66 @@
+{
+  "$comment": "Sanitization gate config for Iris, the comms & marketing director package. The deterministic layer (secrets/PII) needs no tuning. The semantic layer does ALL the work in this domain: a comms particular — a handle, a channel, a repo, an MRR figure, a cadence target — has no credential shape, so layer 1 catches none of them. Gap K of the Stage 1 gap list.",
+
+  "package_name": "iris",
+  "package_kind": "SHARED, public agent package",
+
+  "sensitive_prefixes": [
+    "hermes-skill/",
+    "hermes-plugin/",
+    "docker/SOUL",
+    "docs/",
+    "engine/"
+  ],
+  "$comment_prefixes": "Paths whose CONTENT could leak brand particulars. Top-level *.md (README, CONTRIBUTING) are always included automatically. engine/ is here on purpose: the bundle loader, the trust resolver and the ledger writer are the modules most likely to grow a docstring, a default, or a test fixture naming a real lane, a real handle, or a real repo.",
+
+  "$comment_brands_not_listed": "brands/ is deliberately ABSENT from sensitive_prefixes. Brand bundles are supposed to be full of particulars — that is what a bundle IS — and this repo is private for exactly that reason. Sending them to the semantic layer would flag the entire directory on every PR and train everyone to ignore the gate. The bundles are handled by a different rule: at extraction time a bundle is DROPPED, not sanitized (see brands/README.md). The deterministic layer still scans brands/ on every run, and must keep doing so — a bundle names secret NAMES and never secret VALUES, and layer 1 is what enforces that.",
+
+  "semantic": {
+    "domain_noun": "brand",
+    "$comment_domain_noun": "A 'particular' belongs to one brand — one set of accounts, voice, lore and trust grants this agent speaks for. The package is the generic apparatus (bundle contract, trust ladder, gate, ledger schema); a brand's handles, channels, repos, numbers and published lines are its particulars and must never land here.",
+    "flag_examples": [
+      "a social handle, account name, or user/channel/bot username tied to one brand (anything shaped like @somebrand, @somebrandbot, @SomeBrandField), including handles named only to say they are personal, expendable, unused, or possibly shadowbanned",
+      "a chat channel, ring, or server name for a real community — a Discord server name, a #channel, a role-gated tier or ring name, a Telegram channel or group, a Slack workspace or channel — or a list of which bots speak in which of them",
+      "a code repository, GitHub org, package registry entry, Cloudflare Pages project, deploy workflow path, preview-alias pattern, hostname, or domain belonging to one brand's infrastructure",
+      "revenue, MRR/ARR, subscriber or paying-user counts, pricing, budget, burn, runway, or CAC figures for a specific brand or product",
+      "engagement or audience metrics tied to one brand — follower/subscriber counts, impressions, click-through, conversion or activation rates, analytics tokens or dashboard endpoints",
+      "a cadence target, posting frequency, quota, or promotion threshold expressed for a real lane (\"post weekly\", \"8 consecutive approved posts\", \"1,000 subscribers before X\") rather than as a schema field to be filled in",
+      "a trust level, ceiling, grant, demotion, or lane definition attached to a named real platform account for a real brand, or the rationale citing that brand's account-ban risk posture",
+      "personal names of an owner, operator, teammate, client, or collaborator, and any real person's messaging identifier (Telegram/Signal UUID, phone, allowlisted user ID) — these belong in deployment config, never in the package",
+      "the name of a specific brand, product, venture, or campaign this package serves, including when used as a directory name, heading, skill name, example, or file path",
+      "published or in-flight content particulars: post titles, slugs, URLs, verbatim fixed phrases, taglines, a named worst/best piece used as calibration, or quoted lines from real published work",
+      "taste-ledger content from a real brand: entry IDs, an operator's verbatim words, a diff of a real draft, or a rule attributed to a named person",
+      "the name or value of a deployment secret, an API-token expiry date, DNS/registrar/mail posture, or an unpatched publication or security trap in a named brand's infrastructure — naming the weakness and where it lives is reconnaissance even with no credential attached",
+      "content-repo internals of one brand's publishing surface: content directory paths, frontmatter field lists, image directories, or house body-markup conventions"
+    ],
+    "do_not_flag_examples": [
+      "generic methodology (how a brand bundle is structured, how a draft moves through an operator gate, how to run a pre-ship checklist, how to write a taste-ledger entry, how a level is earned or demoted)",
+      "the trust ladder's level names and semantics (L0-L4) and the schema keys of trust.yml / accounts.yml / taste-ledger.md with placeholder values",
+      "the generic anti-slop vocabulary list (LLM-isms, hedging, throat-clearing, CTA closers, em-dash discipline) — it is not brand-specific and is the most transferable piece in the package",
+      "platform names and their publicly documented hard limits (character counts, media caption limits, API tiers)",
+      "publicly documented platform policy and research findings cited as evidence, with no brand's accounts attached",
+      "tool, API, library, framework, or product names used generically (Astro, Cloudflare Pages, Telegram Bot API, MTProto, GitHub Actions, Discord)",
+      "generic role nouns (owner, operator, drafter, poster, listener, maintainer) not attached to a named person",
+      "placeholder handles, channels, repos, or figures that are obviously fictional or templated ({{BRAND}}, @yourbrand, example.com, <slug>)"
+    ],
+    "model": "claude-opus-4-8"
+  },
+
+  "deterministic": {
+    "$comment": "The credential/PII layer runs with NO external dependencies and FAILS CLOSED. It catches almost nothing in this domain by design — comms particulars have no credential shape — but it is the floor that keeps a token or a real contact out of a brand bundle. Allowlist false-positives by exact line substring in 'allow_substrings'.",
+    "enabled": true,
+    "allow_substrings": [
+      "noreply@anthropic.com",
+      "example.com",
+      "user@example",
+      "127.0.0.1",
+      "0.0.0.0",
+      "169.254.169.254"
+    ],
+    "$comment_reserved_addresses": "127.0.0.1, 0.0.0.0 and 169.254.169.254 are globally reserved constants, not anybody's address — the ipv4 detector cannot tell them from a real host, and it should not have to. 169.254.169.254 is the cloud metadata endpoint, and it is allowlisted so engine/bluesky.py can NAME it in the comments explaining why the thumb fetch resolves a hostname before opening it. Removing the literal to satisfy the scanner would delete the one detail that makes that SSRF defense legible to the next reader; the address is public documentation, and the defense is the thing worth protecting. Add a reserved address here only when it is reserved by an RFC — never a host that belongs to someone.",
+    "skip_paths": [
+      "tests/"
+    ],
+    "$comment_skip_paths": "DO NOT REMOVE, and DO NOT add brands/ here. tests/ legitimately holds credential-SHAPED fixtures (sk-ant-..., AKIA...) to exercise the detectors; scanning them self-flags and hard-fails a clean repo. The scanner defaults this key to EMPTY when absent, so omitting it is not a no-op — it breaks the gate. brands/ must stay scanned: bundles are exempt from the SEMANTIC layer, never from the credential floor."
+  }
+}
