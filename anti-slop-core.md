@@ -1,7 +1,7 @@
 ---
 name: anti-slop-core
-version: 1.2.0-public.1
-dated: 2026-10-19
+version: 1.3.0-public.1
+dated: 2026-10-20
 tracking: internal anti-slop-core v1.1.0 (2026-08-19)
 review: quarterly, and on every newly documented failure mode, whichever comes first
 maintainer: Cyborg Garden
@@ -10,30 +10,30 @@ provenance: genericised public edition of an internal, versioned guide. All name
   remain in the private store. External citations are public research and carried in full.
 ---
 
-# anti-slop core — the base layer every voice inherits
+# anti-slop core: the base layer every voice inherits
 
 This is a versioned floor beneath brand and personal voices. Voices inherit it **by
 reference, never by copy**, so updating this file updates every voice that depends on it
 without touching a single voice file. Two kinds of content, with different override rules:
 
-- **Constraints** are floors. No voice may relax one. Tightening is always allowed — a
+- **Constraints** are floors. No voice may relax one. Tightening is always allowed: a
   banned list stricter than C2 is the design working, not an exception.
-- **Ideals** are defaults. A voice may override an ideal with something better — a
-  developed alternative — never with nothing.
+- **Ideals** are defaults. A voice may override an ideal with something better, a
+  developed alternative, never with nothing.
 
 ## The one idea to hold
 
 Slop is an absence, not a vocabulary. Text reads as machine-made when it has been sanded
-free of anything specific, anything at stake, any claim the writer would defend. The tells
+free of anything specific and any claim the writer would defend. The tells
 everyone lists are what rushes in to fill that vacuum. So you do not write well by
 deleting the tells; you write well by putting back what was missing, then scanning for
 residue. Both failure modes are real: **under-edited** (the tells are present) and
-**over-scrubbed** (the tells are gone and nothing arrived to replace them — clean, dead,
+**over-scrubbed** (the tells are gone but nothing arrived to replace them; clean, dead,
 and still detectable).
 
 The corollary that keeps the whole discipline honest: a voice is not a list of bans. The
-bans are the guardrails; the voice is a developed position — moves the writer would
-defend, calibrated against real exemplars — arrived at by drafting, feedback, and
+bans are the guardrails; the voice is a developed position (moves the writer would
+defend, calibrated against real exemplars), arrived at by drafting, feedback, and
 correction. A voice that exists only as "like the house voice but shorter" is not a voice
 yet; it is a truncation.
 
@@ -242,6 +242,14 @@ your drafts are the ones your models produce.
 - Zero em dashes in the same informal cross-model test — **documented (single test)**
 - Recurring prose oddities — **observed, needs entries**
 
+### GLM (z.ai)
+
+- Em-dash use in public-facing prose even under an explicit in-house ban; caught by human
+  review twice in one day (2026-10: a 200-character announcement draft, and casual
+  internal prose from the same fleet) — **observed (in-house; receipts held in the
+  private store)**
+- Needs entries; treat as a starting checklist, not a profile
+
 The per-family tables age fast. Treat them as a starting checklist for your own
 observation, refresh them on every model migration, and never let a quirk entry override
 the structural floor: escaping your model's accent matters less than having something
@@ -276,6 +284,15 @@ nobody has to pretend certainty the record doesn't have.
 
 ## Changelog
 
+- **1.3.0-public.1** (2026-10-20) — self-audit pass applied to this edition's own
+  front matter, prompted by public feedback that the README pitch read as
+  model-flavored despite the guide's subject. The pitch and title are recomposed per C4
+  (interjection dashes to commas, colons, or periods; the pitch's anaphora triad cut
+  to its two load-bearing terms; the over-scrubbed triad reclosed as a plain series);
+  the core's opening section mirrors the fix. The per-model quirks catalog gains a GLM (z.ai)
+  entry, observed-only, receipts held in the private store. Constraint-heading and
+  bullet-gloss dashes are retained as definitional (C4's earned case); this is a scoped
+  pass, not a full-document punctuation sweep.
 - **1.2.0-public.1** (2026-10-19) — first public edition. Genericised from internal
   v1.1.0: named-person attributions and in-house incident records removed (they remain in
   the private store), the per-model quirks catalog promoted from the internal research
