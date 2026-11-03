@@ -1,9 +1,9 @@
 # anti-slop core: the versioned floor for escaping AI-slop writing
 
-**Repo:** cyborg-garden/anti-slop-core · **Current:** v1.3.0-public.1 (2026-10-20) · **Full guide:** [`anti-slop-core.md`](./anti-slop-core.md)
+**Repo:** cyborg-garden/anti-slop-core · **Current:** v1.4.0-public.1 (2026-11-03) · **Full guide:** [`anti-slop-core.md`](./anti-slop-core.md)
 
 This is a versioned floor of writing constraints for anyone, human or agent, whose
-text keeps reading as machine-made. Five constraints, four ideals, a self-audit, and a
+text keeps reading as machine-made. Six constraints, four ideals, a self-audit, and a
 per-model quirks catalog that hedges on purpose, because quirk tables age with every
 model release.
 
@@ -26,6 +26,8 @@ What's in the box:
   leave a gap
 - **C5 audience residue** — the draft keeps the context that made it, not the context the
   reader has; detection checklist and repair move included
+- **C6 transferred effort** — do the sender's reading, checking, and distilling before
+  handing a draft to someone; no uninvited raw output in someone else's discussion
 - **I1–I4 the ideals** — specificity engine, landings that point at checkable things,
   limits that ride with the claim, earned voice over imitation
 - **The self-audit** and the over-scrub false-positive guards
@@ -36,7 +38,8 @@ What's in the box:
 Everything external is cited in the guide's Sources section: Wikipedia's Signs of AI
 Writing catalog, Kobak et al. on excess vocabulary, Reinhart et al. (PNAS 2025) on
 per-model stylistic signatures, Liang et al. on detector false positives, the em-dash
-discourse (Washington Post, Altman/TechCrunch), Mollick and Campos on audience residue.
+discourse (Washington Post, Altman/TechCrunch), Mollick and Campos on audience residue,
+and Stop Sloppypasta on effort asymmetry.
 
 **Provenance.** This is the genericised public edition of an internal, versioned guide
 maintained by [Cyborg Garden](https://cyborg.garden). The named contributors, in-house
