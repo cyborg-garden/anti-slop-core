@@ -1,8 +1,8 @@
 ---
 name: anti-slop-core
-version: 1.3.0-public.1
-dated: 2026-10-20
-tracking: internal anti-slop-core v1.1.0 (2026-08-19)
+version: 1.4.0-public.1
+dated: 2026-11-03
+tracking: internal anti-slop-core v1.2.0 (2026-11-03)
 review: quarterly, and on every newly documented failure mode, whichever comes first
 maintainer: Cyborg Garden
 provenance: genericised public edition of an internal, versioned guide. All named-person
@@ -153,6 +153,38 @@ it was handed was addressed to insiders. Nobody re-aimed it.
 orientation belongs. Re-address the text to a reader who was not in the room: what this
 is, who it is for, what changes for them today.
 
+### C6 — Transferred effort. Do the sender's work before handing over the draft.
+
+A fluent answer can move work instead of doing it. The recipient has to find the relevant
+part, check its claims, and work out what the sender actually thinks. Generation made
+producing that answer cheap; it did not make reading or verifying it cheap. Stop
+Sloppypasta calls the resulting etiquette failure "effort asymmetry."
+
+This constraint covers text handed to a person in an existing exchange: a chat message,
+review comment, email, or shared document. It applies to human-written text too. Do not
+paste raw model output into a discussion nobody asked it to join. A request for help or a
+contribution is not automatically a request for generated prose. A new post in a channel
+meant for contributions is a different case; use the surface's purpose, not the presence of
+an existing thread, to decide.
+
+Before sending:
+
+- **Read it end to end.** If you did not read it, do not forward it.
+- **Verify what you hand over.** Check the facts and sources you can. Mark uncertainty you
+  could not resolve instead of letting fluent prose conceal it.
+- **Distill it for this recipient.** Answer the live question, use the context already in
+  the exchange, and cut the generic survey. If nothing in the output helps, send nothing.
+- **Say what the recipient is getting.** Raw output must be labelled as raw. For edited
+  work, disclose assistance and what you checked when that changes how much verification
+  the recipient still needs to do. Disclosure does not replace verification.
+- **Prefer an opt-in container for long source material.** In chat, link or attach it and
+  state the useful part in your own words. Check that the recipient can open the link and
+  that its contents are safe to share. Do not make a large paste displace the conversation.
+
+The sender still owns what they send. Assistance disclosure is not a general requirement
+to narrate every tool or prompt; it is a way to tell the recipient what has been checked
+and what has not.
+
 ---
 
 ## Ideals (what good looks like — the defaults)
@@ -191,7 +223,8 @@ never trimmed to it).
 
 ## The self-audit (run after drafting)
 
-Scan the draft against C1–C5, flagging clusters. Then ask the humanizer's question:
+Scan the draft against C1–C6, flagging clusters. Before handing it to someone, run C6's
+sender checks too. Then ask the humanizer's question:
 **"What still makes this obviously AI?"** Rewrite that; don't just trim it.
 
 **False-positive guards — do not over-scrub.** Preserve true human signals: specific
@@ -272,6 +305,9 @@ nobody has to pretend certainty the record doesn't have.
 
 ## Sources (nothing here is invented)
 
+- [Stop Sloppypasta](https://stopsloppypasta.ai/en/) — the effort-asymmetry framing and
+  the read / verify / distill / disclose / requested / linked-source practices behind C6.
+  The scope distinctions and private-link guard are this guide's additions.
 - Wikipedia, [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) — the observational catalog behind most of C1 and the em-dash mechanism in C4
 - Kobak et al., [Delving into LLM-assisted writing](https://arxiv.org/abs/2406.07016) (Science Advances) · Juzek & Ward, [Why Does ChatGPT 'Delve' So Much?](https://aclanthology.org/2025.coling-main.426/) (COLING 2025) — the excess-vocabulary measurement in C2
 - Reinhart et al., [Do LLMs write like humans?](https://www.pnas.org/doi/10.1073/pnas.2422455122) (PNAS 2025) — per-model stylistic signatures, the ground for the quirks catalog
@@ -284,6 +320,13 @@ nobody has to pretend certainty the record doesn't have.
 
 ## Changelog
 
+- **1.4.0-public.1** (2026-11-03) — minor: new constraint **C6, transferred effort**,
+  adapted from Stop Sloppypasta. A draft handed to a person needs the sender's reading,
+  verification, distillation, and useful disclosure. Raw output does not belong uninvited
+  in someone else's discussion; long source material belongs behind a safe, accessible
+  link in chat. The constraint scopes its unsolicited-output and link guidance to existing
+  exchanges rather than banning every new post or public long-form document. Self-audit
+  range widened to C1–C6. No existing constraint or ideal changed meaning.
 - **1.3.0-public.1** (2026-10-20) — self-audit pass applied to this edition's own
   front matter, prompted by public feedback that the README pitch read as
   model-flavored despite the guide's subject. The pitch and title are recomposed per C4
