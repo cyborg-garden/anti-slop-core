@@ -164,8 +164,9 @@ This constraint covers text handed to a person in an existing exchange: a chat m
 review comment, email, or shared document. It applies to human-written text too. Do not
 paste raw model output into a discussion nobody asked it to join. A request for help or a
 contribution is not automatically a request for generated prose. A new post in a channel
-meant for contributions is a different case; use the surface's purpose, not the presence of
-an existing thread, to decide.
+meant for contributions is invited by the surface's purpose; it is not unsolicited output
+merely because nobody requested that particular post. Use the surface's purpose, not the
+presence of an existing thread, to decide.
 
 Before sending:
 
