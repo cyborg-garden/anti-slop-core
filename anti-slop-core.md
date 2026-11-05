@@ -2,7 +2,9 @@
 name: anti-slop-core
 version: 1.5.0-public.1
 dated: 2026-11-05
-tracking: internal anti-slop-core v1.2.0 (2026-11-03)
+tracking: internal anti-slop-core at LATEST (operator ruling 2026-11-05: the public
+  edition tracks the internal canonical file continuously, not at version boundaries;
+  internal canonical = cyborg-garden/iris-brands base/anti-slop-core.md, v1.3.0 same day)
 review: quarterly, and on every newly documented failure mode, whichever comes first
 maintainer: Cyborg Garden
 provenance: genericised public edition of an internal, versioned guide. All named-person
