@@ -1,7 +1,7 @@
 ---
 name: anti-slop-core
-version: 1.4.0-public.1
-dated: 2026-11-03
+version: 1.5.0-public.1
+dated: 2026-11-05
 tracking: internal anti-slop-core v1.2.0 (2026-11-03)
 review: quarterly, and on every newly documented failure mode, whichever comes first
 maintainer: Cyborg Garden
@@ -31,6 +31,12 @@ residue. Both failure modes are real: **under-edited** (the tells are present) a
 **over-scrubbed** (the tells are gone but nothing arrived to replace them; clean, dead,
 and still detectable).
 
+Over-scrubbed, concretely: "Our solution facilitates seamless collaboration across
+teams" is under-edited. Scrub it to "Our tool helps teams work together" and every tell
+is gone, and nothing has arrived. The fix is not a cleaner synonym; it is a fact:
+"Two people can edit the same board at once, and the conflict log shows who changed
+what." That sentence could be wrong, which is how you know someone wrote it.
+
 The corollary that keeps the whole discipline honest: a voice is not a list of bans. The
 bans are the guardrails; the voice is a developed position (moves the writer would
 defend, calibrated against real exemplars), arrived at by drafting, feedback, and
@@ -47,24 +53,39 @@ Lexical bans are the easy half. These are not:
 
 - **Uniform paragraph blocks** — 4–8 sentences each, all the same weight, burying the
   reader instead of moving.
-- **The metronome cadence** — alternating long/short sentences on a schedule. Variance
-  must come from meaning: long when the idea is, short when it lands.
+- **The metronome cadence** — sentences that alternate long/short on a schedule, so the
+  paragraph taps like a drum machine. Variance must come from meaning: long when the
+  idea is, short when it lands.
+  > *Metronome:* "The results were surprising to everyone on the team. They were clear.
+  > We had not expected the effect to be this strong in the wild. It held."
+  > *Following the thought:* "The results surprised all of us: the effect held in the
+  > wild, and it was stronger than anything we had seen on the bench. That part was clear."
 - **The essay-shaped response** — throat-clearing opening, dutiful body, a closing
   paragraph that restates what was just said. No summary paragraphs. Trust the reader to
   have read it.
 - **Over-signposting** — "let's dive in," "here's what you need to know." The structure
   should be felt, not announced.
-- **Negative parallelism as a reflex** — "not just X, it's Y." (Cataloged as a
-  stereotypical AI sign by Wikipedia's guide.)
-- **Reflexive tricolons** — three items where two would do. (Same guide: "LLMs overuse the
-  rule of three.")
-- **The hedging seesaw** — "could potentially possibly."
-- **Manufactured short-fragment drama** — punchy fragments unearned by any build.
-- **Elegant variation** — cycling synonyms to dodge an honest repeat. (Attributed in the
-  research to repetition penalties.)
+- **"Not just X, it's Y" as a reflex** — the shape that inflates whatever follows.
+  Once is rhetoric; every other paragraph is a tic.
+  > "It's not just a tool, it's a collaborator." → "It plays a bar, you answer it."
+  (Cataloged as a stereotypical AI sign by Wikipedia's guide.)
+- **The automatic trio** — three items where two would do, the third added for the
+  rhythm, not the content. (Same guide: "LLMs overuse the rule of three.")
+  > "The rewrite is faster, clearer, and more robust." What does robust add that faster
+  > and clearer didn't? If the answer is nothing, the third item was there for the beat.
+- **The hedging seesaw** — qualifiers stacked on qualifiers: "could potentially possibly."
+  One honest limit ("we tested this on two projects") replaces all of them.
+- **Manufactured short-fragment drama** — a one-word sentence dropped in for suspense the
+  paragraph never earned. "We shipped the fix. Finally." Finally according to whom?
+- **Elegant variation** — calling the same thing by a new name each time to avoid
+  repeating a word: the tool, the system, the platform, the framework. The reader loses
+  track of whether these are four things or one. Repeat the honest name. (Attributed in
+  the research to repetition penalties.)
 - **List-itis** — bolded-pseudo-header bullet lists where prose should be; converting an
   argument into an inventory.
 - **Symmetry theater** — "on one hand / on the other" when one hand has the evidence.
+  > "On one hand, the rewrite cuts load times by half; on the other, change is always
+  > a little uncomfortable." Those are not two sides. Ship the number.
   False balance is a lie of shape, not of content.
 - **The pre-emptive defense** — writing to deflect anticipated criticism instead of to
   communicate. Defensive writing is legible as defensive.
@@ -213,12 +234,26 @@ is unfocused vagueness that protects the writer; calibration commits to more —
 its conditions, and its boundary in one motion. Where there is a number, its conditions
 travel in the same sentence.
 
+> *Hedging:* "Results may vary somewhat depending on your setup."
+> *Calibration:* "We measured this on a laptop over hotel wifi; on a wired connection
+> the latency roughly halves."
+The first warns you nothing; the second tells you when the claim stops holding.
+
 ### I4 — Earned voice, not imitation.
 
 A voice or register is a developed position — moves the writer would defend, calibrated
-against real exemplars — not a guess at what someone wants replicated. Build the draft to
-the register's contract from the first sentence (a 280-character post is written to 280,
-never trimmed to it).
+against real exemplars — not a guess at what someone wants replicated. Imitation borrows
+the surface: "make it punchy" yields short sentences and nothing behind them. Earned
+voice knows what it would refuse to say. Build the draft to the register's contract from
+the first sentence (a 280-character post is written to 280, never trimmed to it).
+
+### I5 — Legibility is a constraint on this document, not just on your drafts.
+
+A rule written in claudlish teaches claudlish no matter what it says: the guide sits in
+the context window and its style is a prompt too. So every constraint here must be
+usable by a reader who has never met the term. If a constraint cannot be shown in a
+two-line before→after example, it is not finished being written down. Prefer the plain
+name over the clever one; the clever name may stay if the example carries it.
 
 ---
 
@@ -321,6 +356,15 @@ nobody has to pretend certainty the record doesn't have.
 
 ## Changelog
 
+- **1.5.0-public.1** (2026-11-05) — legibility pass, prompted by public feedback that
+  parts of the guide were too technical and metaphorical to act on, and that a rule
+  written in model-flavored prose prompts that style even while banning it. New ideal
+  **I5** states the meta-rule: every constraint must be showable in a two-line
+  before→after example. C1's jargon entries (metronome cadence, negative parallelism,
+  tricolons, elegant variation, symmetry theater, short-fragment drama) gain plain names
+  and worked examples; the one idea, I3, and I4 gain examples; the 1.3.0 changelog entry
+  is rewritten in plain words. No constraint or ideal changed meaning.
+
 - **1.4.0-public.1** (2026-11-03) — minor: new constraint **C6, transferred effort**,
   adapted from Stop Sloppypasta. A draft handed to a person needs the sender's reading,
   verification, distillation, and useful disclosure. Raw output does not belong uninvited
@@ -330,13 +374,13 @@ nobody has to pretend certainty the record doesn't have.
   range widened to C1–C6. No existing constraint or ideal changed meaning.
 - **1.3.0-public.1** (2026-10-20) — self-audit pass applied to this edition's own
   front matter, prompted by public feedback that the README pitch read as
-  model-flavored despite the guide's subject. The pitch and title are recomposed per C4
-  (interjection dashes to commas, colons, or periods; the pitch's anaphora triad cut
-  to its two load-bearing terms; the over-scrubbed triad reclosed as a plain series);
-  the core's opening section mirrors the fix. The per-model quirks catalog gains a GLM (z.ai)
-  entry, observed-only, receipts held in the private store. Constraint-heading and
-  bullet-gloss dashes are retained as definitional (C4's earned case); this is a scoped
-  pass, not a full-document punctuation sweep.
+  model-flavored despite the guide's subject. The pitch and title are recomposed per C4:
+  interjection dashes became commas, colons, or periods; the pitch opened with three
+  sentences starting the same way and lost the third; one padded three-item list became
+  a plain two-item one. The core's opening section mirrors the fix. The per-model quirks
+  catalog gains a GLM (z.ai) entry, observed-only, receipts held in the private store.
+  Constraint-heading and bullet-gloss dashes are retained as definitional (C4's earned
+  case); this is a scoped pass, not a full-document punctuation sweep.
 - **1.2.0-public.1** (2026-10-19) — first public edition. Genericised from internal
   v1.1.0: named-person attributions and in-house incident records removed (they remain in
   the private store), the per-model quirks catalog promoted from the internal research
