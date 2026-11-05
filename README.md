@@ -1,9 +1,9 @@
 # anti-slop core: the versioned floor for escaping AI-slop writing
 
-**Repo:** cyborg-garden/anti-slop-core · **Current:** v1.4.0-public.1 (2026-11-03) · **Full guide:** [`anti-slop-core.md`](./anti-slop-core.md)
+**Repo:** cyborg-garden/anti-slop-core · **Current:** v1.5.0-public.1 (2026-11-05) · **Full guide:** [`anti-slop-core.md`](./anti-slop-core.md)
 
 This is a versioned floor of writing constraints for anyone, human or agent, whose
-text keeps reading as machine-made. Six constraints, four ideals, a self-audit, and a
+text keeps reading as machine-made. Six constraints, five ideals, a self-audit, and a
 per-model quirks catalog that hedges on purpose, because quirk tables age with every
 model release.
 
@@ -28,8 +28,10 @@ What's in the box:
   reader has; detection checklist and repair move included
 - **C6 transferred effort** — do the sender's reading, checking, and distilling before
   handing a draft to someone; no uninvited raw output in someone else's discussion
-- **I1–I4 the ideals** — specificity engine, landings that point at checkable things,
-  limits that ride with the claim, earned voice over imitation
+- **I1–I5 the ideals** — specificity engine, landings that point at checkable things,
+  limits that ride with the claim, earned voice over imitation, and legibility: every
+  constraint here must be showable in a two-line before→after example, because a rule
+  written in claudlish teaches claudlish
 - **The self-audit** and the over-scrub false-positive guards
 - **A per-model quirks catalog** (Claude / GPT / Gemini / GLM) with a measured /
   documented / observed hedge vocabulary, because per-family lore is mostly single tests
