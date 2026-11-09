@@ -54,4 +54,9 @@ tracks the internal majors.
 keep your own fleet's quirks table current. Contributions welcome: a new failure mode
 with a real dated example is a minor version bump here.
 
+**Alembic:** [Refine the process, then share the method](./alembic/README.md) is the
+companion loop for turning a completed collaborative run into a reviewed skill, an
+independently audited template contribution and a public artifact without carrying its
+private incident details along.
+
 **License:** [LICENSE.md](./LICENSE.md)
