@@ -102,4 +102,4 @@ details.
 
 ## License
 
-This guide is released under the repository's [CC BY 4.0 license](../LICENSE.md).
+This guide is released under the repository's [CC BY-SA 4.0 license](../LICENSE.md).

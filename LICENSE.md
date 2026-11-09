@@ -2,7 +2,8 @@
 
 Two licenses cover this repository:
 
-- **The guide and README prose** (`anti-slop-core.md`, `README.md`) are licensed under
+- **The guide and README prose** (`anti-slop-core.md`, `README.md`, and
+  `alembic/README.md`) are licensed under
   [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
   (CC BY-SA 4.0). Attribute "Cyborg Garden" and link to the source.
 - **Code** (`check_sanitization.py`, `sanitize.config.json`) is licensed under the MIT
