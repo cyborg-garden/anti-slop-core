@@ -1,10 +1,10 @@
 ---
 name: anti-slop-core
-version: 1.5.0-public.1
-dated: 2026-11-05
+version: 1.5.1-public.1
+dated: 2026-11-16
 tracking: internal anti-slop-core at LATEST (operator ruling 2026-11-05: the public
   edition tracks the internal canonical file continuously, not at version boundaries;
-  internal canonical = cyborg-garden/iris-brands base/anti-slop-core.md, v1.3.0 same day)
+  internal canonical = cyborg-garden/iris-brands base/anti-slop-core.md, v1.3.1 same day)
 review: quarterly, and on every newly documented failure mode, whichever comes first
 maintainer: Cyborg Garden
 provenance: genericised public edition of an internal, versioned guide. All named-person
@@ -25,19 +25,9 @@ without touching a single voice file. Two kinds of content, with different overr
 
 ## The one idea to hold
 
-Slop is an absence, not a vocabulary. Text reads as machine-made when it has been sanded
-free of anything specific and any claim the writer would defend. The tells
-everyone lists are what rushes in to fill that vacuum. So you do not write well by
-deleting the tells; you write well by putting back what was missing, then scanning for
-residue. Both failure modes are real: **under-edited** (the tells are present) and
-**over-scrubbed** (the tells are gone but nothing arrived to replace them; clean, dead,
-and still detectable).
+AI writing fails when it lacks specific facts or a claim the writer would defend. Stock AI phrases show up when the writer has nothing concrete to say. Deleting those phrases is only half the edit; if you put no real facts back in, the prose stays vague and robotic.
 
-Over-scrubbed, concretely: "Our solution facilitates seamless collaboration across
-teams" is under-edited. Scrub it to "Our tool helps teams work together" and every tell
-is gone, and nothing has arrived. The fix is not a cleaner synonym; it is a fact:
-"Two people can edit the same board at once, and the conflict log shows who changed
-what." That sentence could be wrong, which is how you know someone wrote it.
+For example, "Our solution facilitates seamless collaboration across teams" is full of stock phrases. Cutting them to "Our tool helps teams work together" removes the buzzwords without adding a single fact. Put the fact in instead: "Two people can edit the same board at once, and the conflict log shows who changed what." That sentence could be wrong, which is how you know someone wrote it.
 
 The corollary that keeps the whole discipline honest: a voice is not a list of bans. The
 bans are the guardrails; the voice is a developed position (moves the writer would
@@ -135,10 +125,7 @@ in a long piece is fine and keeps the text from reading as conspicuously scrubbe
 
 ### C5 — Audience residue. The draft keeps the context that made it, not the context the reader has.
 
-Slop is usually an absence. This one is a wrong presence with an absence behind it: the
-private conversation that produced the text stayed in, and the reader's actual starting
-point never got written. The copy reports on the writer's process instead of orienting
-the person who just arrived. Ethan Mollick names the mechanism directly: "Work products
+Public copy fails when it keeps the private conversation that produced it instead of giving a newcomer a starting point. It reports on the writer's internal process rather than telling the reader what this is and why they should care. Ethan Mollick names the mechanism directly: "Work products
 often include information that only matters to the creator and is irrelevant or confusing
 to users, like references to previous drafts or problems solved in earlier iterations."
 
@@ -265,14 +252,7 @@ Scan the draft against C1–C6, flagging clusters. Before handing it to someone,
 sender checks too. Then ask the humanizer's question:
 **"What still makes this obviously AI?"** Rewrite that; don't just trim it.
 
-**False-positive guards — do not over-scrub.** Preserve true human signals: specific
-hard-to-fabricate detail, mixed feelings, dated references, a self-correction, a genuinely
-earned em-dash or tricolon. When a device is earned by the thought, it stays. Laundering
-good prose into blandness is the over-scrubbed failure, and it is still detectable —
-GPTZero's own guidance names smooth, uniform, style-guide-conforming prose as what gets
-human writing flagged, and Liang et al. showed detectors misfire hardest on non-native
-English writers (61.3% of TOEFL essays falsely flagged). The detector-paranoia that
-produces flat, defensive prose is a worse failure than the tells.
+**False-positive guards — do not strip good writing down to blandness.** Keep real human signals: specific hard-to-fabricate detail, mixed feelings, dated references, a self-correction, or a genuinely earned em-dash or three-part list. When a device is earned by the thought, leave it in. Stripping good prose down to blandness still triggers AI detectors: GPTZero's own guidance names smooth, uniform, style-guide-conforming prose as what gets human writing flagged, and Liang et al. showed detectors misfire hardest on non-native English writers (61.3% of TOEFL essays falsely flagged). Writing flat, defensive prose out of detector fear is worse than leaving a tell in.
 
 ---
 
@@ -357,6 +337,13 @@ nobody has to pretend certainty the record doesn't have.
 - [Plagiarism Today](https://www.plagiarismtoday.com/2025/06/26/em-dashes-hyphens-and-spotting-ai-writing/) — the informal cross-model em-dash test
 
 ## Changelog
+
+- **1.5.1-public.1** (2026-11-16) — patch: rewrote the README pitch, "The one idea to
+  hold," the C5 opening, and the self-audit guard in plain sentences after editorial
+  review caught remaining tells in the opening itself ("sanded free," "rush in to fill
+  that vacuum," the dense "Both failure modes are real" contrast, and "It is just quieter
+  about it"). Also updated the README provenance note to match the track-latest ruling
+  from 1.5.0-public.1. Mirrors internal v1.3.1. No constraint or ideal changed meaning.
 
 - **1.5.0-public.1** (2026-11-05) — legibility pass, prompted by public feedback that
   parts of the guide were too technical and metaphorical to act on, and that a rule
