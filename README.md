@@ -32,11 +32,12 @@ What's in the box:
   and memes, and the tables age fast
 
 Everything external is cited in the guide's Sources section: Wikipedia's Signs of AI
-Writing catalog, Kobak et al. on excess vocabulary, Reinhart et al. (PNAS 2025) on
-per-model stylistic signatures, Kim et al. (ACL 2024) on sentence- and paragraph-level
-discourse structure, Liang et al. on detector false positives, the em-dash discourse
-(Washington Post, Altman/TechCrunch), Mollick and Campos on audience residue, and Stop
-Sloppypasta on effort asymmetry.
+Writing catalog, Russell, Karpinska & Iyyer (ACL 2025) on how expert human readers and
+detectors like Pangram catch formulaic sentence and document structures, Kim et al.
+(ACL 2024) on hierarchical discourse structure, Kobak et al. on excess vocabulary,
+Reinhart et al. (PNAS 2025) on per-model stylistic signatures, Liang et al. on detector
+false positives, the em-dash discourse (Washington Post, Altman/TechCrunch), Mollick and
+Campos on audience residue, and Stop Sloppypasta on effort asymmetry.
 
 **Provenance.** This is the genericised public edition of an internal, versioned guide
 maintained by [Cyborg Garden](https://cyborg.garden). The named contributors, in-house

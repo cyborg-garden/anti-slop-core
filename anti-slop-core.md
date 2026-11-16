@@ -330,6 +330,7 @@ nobody has to pretend certainty the record doesn't have.
 - Kobak et al., [Delving into LLM-assisted writing](https://arxiv.org/abs/2406.07016) (Science Advances) · Juzek & Ward, [Why Does ChatGPT 'Delve' So Much?](https://aclanthology.org/2025.coling-main.426/) (COLING 2025) — the excess-vocabulary measurement in C2
 - Reinhart et al., [Do LLMs write like humans?](https://www.pnas.org/doi/10.1073/pnas.2422455122) (PNAS 2025) — per-model stylistic signatures, the ground for the quirks catalog
 - Liang et al., [GPT detectors are biased against non-native English writers](https://arxiv.org/abs/2304.02819) — the false-positive guard
+- Russell, Karpinska & Iyyer, [People who frequently use ChatGPT for writing tasks are accurate and robust detectors of AI-generated text](https://arxiv.org/abs/2501.15654) (ACL 2025) — expert human readers misclassified only 1 of 300 articles (even after paraphrasing and humanization) by spotting formulaic sentence and document structures, including vaguely upbeat conclusions, alongside AI vocabulary; [Pangram](https://www.pangram.com/blog/how-does-ai-detection-work) (which documents uniform paragraph organization, sentence structure, and monotonous rhythm among its signals, though the ACL study does not isolate Pangram's internal feature weights) was the only automatic detector to match them
 - [GPTZero](https://gptzero.me/news/how-ai-detectors-work/) on perplexity and burstiness, plus Kim et al., [Threads of Subtlety: Detecting Machine-Generated Texts Through Discourse Motifs](https://aclanthology.org/2024.acl-long.298/) (ACL 2024) on sentence- and paragraph-level discourse structure — the measured ground behind C1's cadence and paragraph-shape rules
 - Folta, [LitHub](https://lithub.com/heres-a-handy-guide-to-help-you-spot-ai-writing/) — the "sanded down into a blurry, generic sketch" framing behind the one idea
 - Mollick ([bsky](https://bsky.app/profile/emollick.bsky.social/post/3mteazepkqc2n)) and Campos ([bsky](https://bsky.app/profile/daniloc.xyz/post/3mtecfm3aps2v)) — the C5 external ground
@@ -343,10 +344,10 @@ nobody has to pretend certainty the record doesn't have.
   review caught remaining tells in the opening itself ("sanded free," "rush in to fill
   that vacuum," the dense "Both failure modes are real" contrast, "It is just quieter
   about it," and the formulaic "Deleting those phrases is only half the edit" cadence).
-  Added Kim et al. (ACL 2024) to Sources alongside GPTZero for hierarchical sentence- and
-  paragraph-level discourse structure, and updated the README provenance note to match the
-  track-latest ruling from 1.5.0-public.1. Mirrors internal v1.3.1. No constraint or ideal
-  changed meaning.
+  Added Russell, Karpinska & Iyyer (ACL 2025), Pangram, and Kim et al. (ACL 2024) to
+  Sources alongside GPTZero for formulaic sentence/document structure and discourse
+  rhythm, and updated the README provenance note to match the track-latest ruling from
+  1.5.0-public.1. Mirrors internal v1.3.1. No constraint or ideal changed meaning.
 
 - **1.5.0-public.1** (2026-11-05) — legibility pass, prompted by public feedback that
   parts of the guide were too technical and metaphorical to act on, and that a rule
