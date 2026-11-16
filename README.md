@@ -7,10 +7,7 @@ text keeps reading as machine-made. Six constraints, five ideals, a self-audit, 
 per-model quirks catalog that hedges on purpose, because quirk tables age with every
 model release.
 
-The one idea: AI writing fails when it lacks specific facts or a claim the writer would
-defend. Stock AI phrases show up when the writer has nothing concrete to say. Deleting
-those phrases is only half the edit; if you put no real facts back in, the prose stays
-vague and robotic.
+The one idea: AI writing sounds fake when the writer has no specific facts or real claim to stand behind. Stock AI phrases show up because there is nothing concrete to say. If you cut the buzzwords without putting real facts in their place, the prose still sounds vague and machine-made.
 
 What's in the box:
 
@@ -36,9 +33,10 @@ What's in the box:
 
 Everything external is cited in the guide's Sources section: Wikipedia's Signs of AI
 Writing catalog, Kobak et al. on excess vocabulary, Reinhart et al. (PNAS 2025) on
-per-model stylistic signatures, Liang et al. on detector false positives, the em-dash
-discourse (Washington Post, Altman/TechCrunch), Mollick and Campos on audience residue,
-and Stop Sloppypasta on effort asymmetry.
+per-model stylistic signatures, Kim et al. (ACL 2024) on sentence- and paragraph-level
+discourse structure, Liang et al. on detector false positives, the em-dash discourse
+(Washington Post, Altman/TechCrunch), Mollick and Campos on audience residue, and Stop
+Sloppypasta on effort asymmetry.
 
 **Provenance.** This is the genericised public edition of an internal, versioned guide
 maintained by [Cyborg Garden](https://cyborg.garden). The named contributors, in-house

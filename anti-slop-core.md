@@ -25,7 +25,7 @@ without touching a single voice file. Two kinds of content, with different overr
 
 ## The one idea to hold
 
-AI writing fails when it lacks specific facts or a claim the writer would defend. Stock AI phrases show up when the writer has nothing concrete to say. Deleting those phrases is only half the edit; if you put no real facts back in, the prose stays vague and robotic.
+AI writing sounds fake when the writer has no specific facts or real claim to stand behind. Stock AI phrases show up because there is nothing concrete to say. If you cut the buzzwords without putting real facts in their place, the prose still sounds vague and machine-made.
 
 For example, "Our solution facilitates seamless collaboration across teams" is full of stock phrases. Cutting them to "Our tool helps teams work together" removes the buzzwords without adding a single fact. Put the fact in instead: "Two people can edit the same board at once, and the conflict log shows who changed what." That sentence could be wrong, which is how you know someone wrote it.
 
@@ -330,7 +330,7 @@ nobody has to pretend certainty the record doesn't have.
 - Kobak et al., [Delving into LLM-assisted writing](https://arxiv.org/abs/2406.07016) (Science Advances) · Juzek & Ward, [Why Does ChatGPT 'Delve' So Much?](https://aclanthology.org/2025.coling-main.426/) (COLING 2025) — the excess-vocabulary measurement in C2
 - Reinhart et al., [Do LLMs write like humans?](https://www.pnas.org/doi/10.1073/pnas.2422455122) (PNAS 2025) — per-model stylistic signatures, the ground for the quirks catalog
 - Liang et al., [GPT detectors are biased against non-native English writers](https://arxiv.org/abs/2304.02819) — the false-positive guard
-- [GPTZero](https://gptzero.me/news/how-ai-detectors-work/) on perplexity and burstiness — the measured fact behind the cadence rules
+- [GPTZero](https://gptzero.me/news/how-ai-detectors-work/) on perplexity and burstiness, plus Kim et al., [Threads of Subtlety: Detecting Machine-Generated Texts Through Discourse Motifs](https://aclanthology.org/2024.acl-long.298/) (ACL 2024) on sentence- and paragraph-level discourse structure — the measured ground behind C1's cadence and paragraph-shape rules
 - Folta, [LitHub](https://lithub.com/heres-a-handy-guide-to-help-you-spot-ai-writing/) — the "sanded down into a blurry, generic sketch" framing behind the one idea
 - Mollick ([bsky](https://bsky.app/profile/emollick.bsky.social/post/3mteazepkqc2n)) and Campos ([bsky](https://bsky.app/profile/daniloc.xyz/post/3mtecfm3aps2v)) — the C5 external ground
 - Washington Post on the [em-dash accusation wave](https://www.washingtonpost.com/technology/2025/04/09/ai-em-dash-writing-punctuation-chatgpt/) · Altman ([X](https://x.com/sama/status/1989193813043069219)) and [TechCrunch](https://techcrunch.com/2025/11/14/openai-says-its-fixed-chatgpts-em-dash-problem/) on the vendor-acknowledged side of C4
@@ -341,9 +341,12 @@ nobody has to pretend certainty the record doesn't have.
 - **1.5.1-public.1** (2026-11-16) — patch: rewrote the README pitch, "The one idea to
   hold," the C5 opening, and the self-audit guard in plain sentences after editorial
   review caught remaining tells in the opening itself ("sanded free," "rush in to fill
-  that vacuum," the dense "Both failure modes are real" contrast, and "It is just quieter
-  about it"). Also updated the README provenance note to match the track-latest ruling
-  from 1.5.0-public.1. Mirrors internal v1.3.1. No constraint or ideal changed meaning.
+  that vacuum," the dense "Both failure modes are real" contrast, "It is just quieter
+  about it," and the formulaic "Deleting those phrases is only half the edit" cadence).
+  Added Kim et al. (ACL 2024) to Sources alongside GPTZero for hierarchical sentence- and
+  paragraph-level discourse structure, and updated the README provenance note to match the
+  track-latest ruling from 1.5.0-public.1. Mirrors internal v1.3.1. No constraint or ideal
+  changed meaning.
 
 - **1.5.0-public.1** (2026-11-05) — legibility pass, prompted by public feedback that
   parts of the guide were too technical and metaphorical to act on, and that a rule
