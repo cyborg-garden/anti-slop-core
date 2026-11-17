@@ -1,24 +1,18 @@
 # anti-slop core: the versioned floor for escaping AI-slop writing
 
-**Repo:** cyborg-garden/anti-slop-core · **Current:** v1.5.0-public.1 (2026-11-05) · **Full guide:** [`anti-slop-core.md`](./anti-slop-core.md)
+**Repo:** cyborg-garden/anti-slop-core · **Current:** v1.5.1-public.1 (2026-11-16) · **Full guide:** [`anti-slop-core.md`](./anti-slop-core.md)
 
 This is a versioned floor of writing constraints for anyone, human or agent, whose
 text keeps reading as machine-made. Six constraints, five ideals, a self-audit, and a
 per-model quirks catalog that hedges on purpose, because quirk tables age with every
 model release.
 
-The one idea: **slop is an absence, not a vocabulary.** Text reads as AI when it has been
-sanded free of anything specific and anything a writer would defend. The tells everyone
-lists are what rush in to fill that vacuum. You do not escape by deleting the tells; you
-escape by putting back what was missing, then scanning for residue. Both failure modes
-are real: under-edited, where the tells are present, and over-scrubbed, where they are
-gone but nothing arrived to replace them. Over-scrubbed text still reads machine-made.
-It is just quieter about it.
+The one idea: AI writing sounds fake when the writer has no specific facts or real claim to stand behind. Stock AI phrases show up because there is nothing concrete to say. If you cut the buzzwords without putting real facts in their place, the prose still sounds vague and machine-made.
 
 What's in the box:
 
 - **C1 structural residue** — uniform blocks, metronome cadence, essay-shaped responses,
-  reflexive tricolons, negative parallelism, symmetry theater
+  automatic three-item lists, "not just X, it's Y," false two-sidedness
 - **C2 the lexical floor** — flag clusters, not singletons; the generic-residue list
   (delve, tapestry, leverage…) and chatbot artifacts
 - **C3 corny metaphors** — earn the image or cut it
@@ -32,22 +26,25 @@ What's in the box:
   limits that ride with the claim, earned voice over imitation, and legibility: every
   constraint here must be showable in a two-line before→after example, because a rule
   written in claudlish teaches claudlish
-- **The self-audit** and the over-scrub false-positive guards
+- **The self-audit** and false-positive guards against stripping good writing down to blandness
 - **A per-model quirks catalog** (Claude / GPT / Gemini / GLM) with a measured /
   documented / observed hedge vocabulary, because per-family lore is mostly single tests
   and memes, and the tables age fast
 
 Everything external is cited in the guide's Sources section: Wikipedia's Signs of AI
-Writing catalog, Kobak et al. on excess vocabulary, Reinhart et al. (PNAS 2025) on
-per-model stylistic signatures, Liang et al. on detector false positives, the em-dash
-discourse (Washington Post, Altman/TechCrunch), Mollick and Campos on audience residue,
-and Stop Sloppypasta on effort asymmetry.
+Writing catalog, Russell, Karpinska & Iyyer (ACL 2025) on how expert human readers and
+detectors like Pangram catch formulaic sentence and document structures, Kim et al.
+(ACL 2024) on hierarchical discourse structure, Kobak et al. on excess vocabulary,
+Reinhart et al. (PNAS 2025) on per-model stylistic signatures, Liang et al. on detector
+false positives, the em-dash discourse (Washington Post, Altman/TechCrunch), Mollick and
+Campos on audience residue, and Stop Sloppypasta on effort asymmetry.
 
 **Provenance.** This is the genericised public edition of an internal, versioned guide
 maintained by [Cyborg Garden](https://cyborg.garden). The named contributors, in-house
 incident records, and internal memory paths behind several entries remain private; the
-constraints, ideals, citations, and hedge vocabulary are carried whole. Public numbering
-tracks the internal majors.
+constraints, ideals, citations, and hedge vocabulary are carried whole. This public
+edition tracks the internal canonical file continuously rather than waiting for major
+version bumps.
 
 **Use it.** Inherit by reference, not by copy. Point your drafter, human or agent, at
 [`anti-slop-core.md`](./anti-slop-core.md), run the self-audit on the final draft, and
