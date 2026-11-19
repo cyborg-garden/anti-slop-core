@@ -1,7 +1,7 @@
 ---
 name: anti-slop-core
-version: 1.5.0-public.1
-dated: 2026-11-05
+version: 1.6.0-public.1
+dated: 2026-11-20
 tracking: internal anti-slop-core at LATEST (operator ruling 2026-11-05: the public
   edition tracks the internal canonical file continuously, not at version boundaries;
   internal canonical = cyborg-garden/iris-brands base/anti-slop-core.md, v1.3.0 same day)
@@ -156,6 +156,17 @@ it was handed was addressed to insiders. Nobody re-aimed it.
 - **Fix memorialization** — the artifact celebrating its own repair history: UI copy that
   announces "now with improved loading," a landing page noting a bug no visitor knew
   existed. The reader sees the product for the first time; there is no "now."
+- **Document self-history.** A doc, README or rule file that reports its own past:
+  "this section was rewritten after the outage," "the flag used to default to on,"
+  "this rule is newer than the rest of the guide." State what is true now, and keep the
+  reason when it still holds. Three places may speak about the past, because there the
+  reader needs it to act safely: a changelog or release notes, a migration or
+  deprecation note that tells readers what to change, and a labelled Why or History
+  section. Everywhere else, recompose into the present tense.
+  > *Self-history:* "The installer originally wrote to your home directory, but after
+  > collisions with other tools we changed it to the project folder."
+  > *Present tense:* "The installer writes to the project folder, so it never collides
+  > with other tools in your home directory."
 - **Prompt residue** — the brief showing through the output: its category labels as
   headings, its three requirements restated as three sections, "as requested."
 - **Unexplained in-group shorthand** — internal project names, ticket IDs, a nickname for
@@ -357,6 +368,12 @@ nobody has to pretend certainty the record doesn't have.
 - [Plagiarism Today](https://www.plagiarismtoday.com/2025/06/26/em-dashes-hyphens-and-spotting-ai-writing/) — the informal cross-model em-dash test
 
 ## Changelog
+
+- **1.6.0-public.1** (2026-11-20) — minor: C5 gains a named entry, **document
+  self-history**. Docs state what is true now; a changelog, a migration or deprecation
+  note, or a labelled Why or History section may carry the past when the reader needs it
+  to act safely. Worked before→after included. No existing constraint or ideal changed
+  meaning.
 
 - **1.5.0-public.1** (2026-11-05) — legibility pass, prompted by public feedback that
   parts of the guide were too technical and metaphorical to act on, and that a rule

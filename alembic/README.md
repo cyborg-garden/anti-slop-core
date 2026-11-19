@@ -51,7 +51,28 @@ A refinement is ready for review when:
 - paths and references resolve in the environment where the guide will be used;
 - no new universal rule is inferred from one person's single edit;
 - an independent reviewer can reconstruct why this change exists without reading
-  the whole original incident.
+  the whole original incident;
+- every gate failure names the rule, the exact location and the fix or a suggested
+  rewrite, unless the hit has no safe automatic fix.
+
+## Gates coach
+
+A gate in this loop returns a verdict and the route to passing it. Each failure
+names the rule that fired, points to the exact location (file and line, or the
+quoted phrase) and gives the fix or a suggested rewrite. A writer who reads the
+report should pass the next run without guessing what the gate wanted.
+
+```
+Weak:    style check failed (2 issues)
+Useful:  draft.md:14  em-dash run
+         text: "The gate — which runs on every change — catches it."
+         fix:  recompose so the sentence never wanted the dash
+         e.g.: "The gate runs on every change. That is where it catches the leak."
+```
+
+A bare reject is reserved for hits with no safe automatic fix. A leaked secret is
+the usual case: the response is to remove it and rotate the credential, and a
+suggested rewrite would only teach the writer to disguise it.
 
 ## What to record
 
@@ -79,6 +100,10 @@ a summary of them is not a substitute for that diff.
 - **Genericity by subtraction.** Removing every concrete example and leaving only
   advice such as “be clear” or “verify carefully.” Retain an anonymized
   before/after that makes the behavior testable.
+- **Reject without route.** A gate that reports only "failed", leaving the writer
+  to guess which rule fired, where and what would pass. Name the rule, the
+  location and the fix. Keep the bare reject for hits with no safe automatic fix,
+  such as a leaked secret, which is removed and rotated.
 - **Ceremony accumulation.** Adding a checklist whose completion does not change
   the next action. Remove or shorten it.
 
