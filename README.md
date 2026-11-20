@@ -1,6 +1,6 @@
 # anti-slop core: the versioned floor for escaping AI-slop writing
 
-**Repo:** cyborg-garden/anti-slop-core · **Current:** v1.5.0-public.1 (2026-11-05) · **Full guide:** [`anti-slop-core.md`](./anti-slop-core.md)
+**Repo:** cyborg-garden/anti-slop-core · **Current:** v1.6.0-public.1 (2026-11-20) · **Full guide:** [`anti-slop-core.md`](./anti-slop-core.md)
 
 This is a versioned floor of writing constraints for anyone, human or agent, whose
 text keeps reading as machine-made. Six constraints, five ideals, a self-audit, and a
@@ -25,7 +25,8 @@ What's in the box:
 - **C4 the em-dash recompose rule** — recompose the sentence, never delete the dash and
   leave a gap
 - **C5 audience residue** — the draft keeps the context that made it, not the context the
-  reader has; detection checklist and repair move included
+  reader has, including docs that narrate their own history; detection checklist and
+  repair move included
 - **C6 transferred effort** — do the sender's reading, checking, and distilling before
   handing a draft to someone; no uninvited raw output in someone else's discussion
 - **I1–I5 the ideals** — specificity engine, landings that point at checkable things,
