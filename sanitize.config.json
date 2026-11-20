@@ -1,0 +1,31 @@
+{
+  "$comment": "Sanitization gate config for anti-slop-core. The gate itself lives in cyborg-garden/swarm-map (docs/sanitization-gate.md); this file only says what a particular means here.",
+  "package_name": "anti-slop-core",
+  "package_kind": "public, genericised writing guide shared across many projects",
+  "sensitive_prefixes": [
+    "alembic/"
+  ],
+  "$comment_prefixes": "alembic/ holds the coaching notes. Top-level *.md (the core guide, README) are always included.",
+  "semantic": {
+    "domain_noun": "client, engagement or private writing project",
+    "flag_examples": [
+      "text quoted from a private draft, client document or unpublished manuscript",
+      "names of real clients, authors or collaborators tied to one engagement",
+      "a brand, product or campaign name that identifies one private engagement",
+      "contact details of a private individual: personal email, phone number, home address, messaging handle or account ID",
+      "credentials, tokens, internal hostnames, server addresses or chat/group IDs of a real deployment"
+    ],
+    "do_not_flag_examples": [
+      "the publishing organisation and its public projects: Cyborg Garden / cyborg-garden / cyborg.garden, the former names NimbleCo / NimbleCoAI / NimbleCoOrg / nimbleco.ai, this repo's own name and GitHub URLs",
+      "published books, essays and authors cited as public examples",
+      "invented example sentences that illustrate a writing habit",
+      "generic tool, API, library, model, provider and standard names, and public reference material",
+      "clearly fictional placeholders (Subject A, <case>, example.com, <host>)"
+    ],
+    "model": "moonshotai/kimi-k3"
+  },
+  "deterministic": {
+    "enabled": true,
+    "allow_substrings": []
+  }
+}
