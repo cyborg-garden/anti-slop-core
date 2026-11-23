@@ -1,7 +1,7 @@
 ---
 name: anti-slop-core
-version: 1.6.0-public.1
-dated: 2026-11-20
+version: 1.6.1-public.1
+dated: 2026-11-23
 tracking: internal anti-slop-core at LATEST (operator ruling 2026-11-05: the public
   edition tracks the internal canonical file continuously, not at version boundaries;
   the internal canonical file is private)
@@ -25,19 +25,9 @@ without touching a single voice file. Two kinds of content, with different overr
 
 ## The one idea to hold
 
-Slop is an absence, not a vocabulary. Text reads as machine-made when it has been sanded
-free of anything specific and any claim the writer would defend. The tells
-everyone lists are what rushes in to fill that vacuum. So you do not write well by
-deleting the tells; you write well by putting back what was missing, then scanning for
-residue. Both failure modes are real: **under-edited** (the tells are present) and
-**over-scrubbed** (the tells are gone but nothing arrived to replace them; clean, dead,
-and still detectable).
+AI writing sounds fake when the writer has no specific facts or real claim to stand behind. Stock AI phrases show up because there is nothing concrete to say. If you cut the buzzwords without putting real facts in their place, the prose still sounds vague and machine-made.
 
-Over-scrubbed, concretely: "Our solution facilitates seamless collaboration across
-teams" is under-edited. Scrub it to "Our tool helps teams work together" and every tell
-is gone, and nothing has arrived. The fix is not a cleaner synonym; it is a fact:
-"Two people can edit the same board at once, and the conflict log shows who changed
-what." That sentence could be wrong, which is how you know someone wrote it.
+For example, "Our solution facilitates seamless collaboration across teams" is full of stock phrases. Cutting them to "Our tool helps teams work together" removes the buzzwords without adding a single fact. Put the fact in instead: "Two people can edit the same board at once, and the conflict log shows who changed what." That sentence could be wrong, which is how you know someone wrote it.
 
 The corollary that keeps the whole discipline honest: a voice is not a list of bans. The
 bans are the guardrails; the voice is a developed position (moves the writer would
@@ -135,10 +125,7 @@ in a long piece is fine and keeps the text from reading as conspicuously scrubbe
 
 ### C5 — Audience residue. The draft keeps the context that made it, not the context the reader has.
 
-Slop is usually an absence. This one is a wrong presence with an absence behind it: the
-private conversation that produced the text stayed in, and the reader's actual starting
-point never got written. The copy reports on the writer's process instead of orienting
-the person who just arrived. Ethan Mollick names the mechanism directly: "Work products
+Public copy fails when it keeps the private conversation that produced it instead of giving a newcomer a starting point. It reports on the writer's internal process rather than telling the reader what this is and why they should care. Ethan Mollick names the mechanism directly: "Work products
 often include information that only matters to the creator and is irrelevant or confusing
 to users, like references to previous drafts or problems solved in earlier iterations."
 
@@ -274,14 +261,7 @@ Scan the draft against C1–C6, flagging clusters. Before handing it to someone,
 sender checks too. Then ask the humanizer's question:
 **"What still makes this obviously AI?"** Rewrite that; don't just trim it.
 
-**False-positive guards — do not over-scrub.** Preserve true human signals: specific
-hard-to-fabricate detail, mixed feelings, dated references, a self-correction, a genuinely
-earned em-dash or tricolon. When a device is earned by the thought, it stays. Laundering
-good prose into blandness is the over-scrubbed failure, and it is still detectable —
-GPTZero's own guidance names smooth, uniform, style-guide-conforming prose as what gets
-human writing flagged, and Liang et al. showed detectors misfire hardest on non-native
-English writers (61.3% of TOEFL essays falsely flagged). The detector-paranoia that
-produces flat, defensive prose is a worse failure than the tells.
+**False-positive guards — do not strip good writing down to blandness.** Keep real human signals: specific hard-to-fabricate detail, mixed feelings, dated references, a self-correction, or a genuinely earned em-dash or three-part list. When a device is earned by the thought, leave it in. Stripping good prose down to blandness still triggers AI detectors: GPTZero's own guidance names smooth, uniform, style-guide-conforming prose as what gets human writing flagged, and Liang et al. showed detectors misfire hardest on non-native English writers (61.3% of TOEFL essays falsely flagged). Writing flat, defensive prose out of detector fear is worse than leaving a tell in.
 
 ---
 
@@ -324,10 +304,7 @@ your drafts are the ones your models produce.
 
 ### GLM (z.ai)
 
-- Em-dash use in public-facing prose even under an explicit in-house ban; caught by human
-  review twice in one day (2026-10: a 200-character announcement draft, and casual
-  internal prose from the same fleet) — **observed (in-house; receipts held in the
-  private store)**
+- Em-dash use in public-facing prose even under an explicit em-dash ban — **observed**
 - Needs entries; treat as a starting checklist, not a profile
 
 The per-family tables age fast. Treat them as a starting checklist for your own
@@ -359,13 +336,24 @@ nobody has to pretend certainty the record doesn't have.
 - Kobak et al., [Delving into LLM-assisted writing](https://arxiv.org/abs/2406.07016) (Science Advances) · Juzek & Ward, [Why Does ChatGPT 'Delve' So Much?](https://aclanthology.org/2025.coling-main.426/) (COLING 2025) — the excess-vocabulary measurement in C2
 - Reinhart et al., [Do LLMs write like humans?](https://www.pnas.org/doi/10.1073/pnas.2422455122) (PNAS 2025) — per-model stylistic signatures, the ground for the quirks catalog
 - Liang et al., [GPT detectors are biased against non-native English writers](https://arxiv.org/abs/2304.02819) — the false-positive guard
-- [GPTZero](https://gptzero.me/news/how-ai-detectors-work/) on perplexity and burstiness — the measured fact behind the cadence rules
+- Russell, Karpinska & Iyyer, [People who frequently use ChatGPT for writing tasks are accurate and robust detectors of AI-generated text](https://arxiv.org/abs/2501.15654) (ACL 2025) — expert human readers misclassified only 1 of 300 articles (even after paraphrasing and humanization) by spotting formulaic sentence and document structures, including vaguely upbeat conclusions, alongside AI vocabulary; [Pangram](https://www.pangram.com/blog/how-does-ai-detection-work) (which documents uniform paragraph organization, sentence structure, and monotonous rhythm among its signals, though the ACL study does not isolate Pangram's internal feature weights) was the only automatic detector to match them
+- [GPTZero](https://gptzero.me/news/how-ai-detectors-work/) on perplexity and burstiness, plus Kim et al., [Threads of Subtlety: Detecting Machine-Generated Texts Through Discourse Motifs](https://aclanthology.org/2024.acl-long.298/) (ACL 2024) on sentence- and paragraph-level discourse structure — the measured ground behind C1's cadence and paragraph-shape rules
 - Folta, [LitHub](https://lithub.com/heres-a-handy-guide-to-help-you-spot-ai-writing/) — the "sanded down into a blurry, generic sketch" framing behind the one idea
 - Mollick ([bsky](https://bsky.app/profile/emollick.bsky.social/post/3mteazepkqc2n)) and Campos ([bsky](https://bsky.app/profile/daniloc.xyz/post/3mtecfm3aps2v)) — the C5 external ground
 - Washington Post on the [em-dash accusation wave](https://www.washingtonpost.com/technology/2025/04/09/ai-em-dash-writing-punctuation-chatgpt/) · Altman ([X](https://x.com/sama/status/1989193813043069219)) and [TechCrunch](https://techcrunch.com/2025/11/14/openai-says-its-fixed-chatgpts-em-dash-problem/) on the vendor-acknowledged side of C4
 - [Plagiarism Today](https://www.plagiarismtoday.com/2025/06/26/em-dashes-hyphens-and-spotting-ai-writing/) — the informal cross-model em-dash test
 
 ## Changelog
+
+- **1.6.1-public.1** (2026-11-23) — patch: rewrote the README pitch, "The one idea to
+  hold," the C5 opening, and the self-audit guard in plain sentences after review caught
+  remaining tells in the opening itself ("sanded free," "rush in to fill that vacuum,"
+  the dense "Both failure modes are real" contrast, "It is just quieter about it," and
+  the formulaic "Deleting those phrases is only half the edit" cadence). Added Russell,
+  Karpinska & Iyyer (ACL 2025), Pangram, and Kim et al. (ACL 2024) to Sources alongside
+  GPTZero for formulaic sentence/document structure and discourse rhythm, genericised the
+  GLM quirks entry, and aligned the README provenance note with continuous tracking. No
+  constraint or ideal changed meaning.
 
 - **1.6.0-public.1** (2026-11-20) — minor: C5 gains a named entry, **document
   self-history**. Docs state what is true now; a changelog, a migration or deprecation
